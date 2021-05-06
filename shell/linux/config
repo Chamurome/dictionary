@@ -1,11 +1,17 @@
-#!/bin/sh
+#!/bin/zsh
 clear 
 # averigua el directorio que aloja el script
 SCRIPT=$(readlink -f $0);
 dir=`dirname $SCRIPT`
-$dir/config.sh
-$dir/build.sh
+bdir=$dir/../../build;
+echo $bdir
+if  ! test -d "$bdir" ; then
+    mkdir -p "$bdir" 
+fi
+cd "$bdir"
 echo --------------------------------------------------------------------------------
-$dir/../../build/app
+export CXX=g++
+export CMAKE_GENERATOR=Ninja
+cmake ..
 echo --------------------------------------------------------------------------------
 

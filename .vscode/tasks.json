@@ -12,6 +12,12 @@
                     "cwd": "${workspaceFolder}/shell/win",
                 },
             },
+            "linux": {
+                "command": "./build",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/linux",
+                },
+            },
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -31,6 +37,12 @@
                     "cwd": "${workspaceFolder}/shell/win",
                 },
             },
+            "linux": {
+                "command": "./config",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/linux",
+                },
+            },
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -48,6 +60,12 @@
                 "command": "run.bat",
                 "options": {
                     "cwd": "${workspaceFolder}/shell/win",
+                },
+            },
+            "linux": {
+                "command": "./run",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/linux",
                 },
             },
             "presentation": {
@@ -72,6 +90,12 @@
                     "cwd": "${workspaceFolder}/shell/win",
                 },
             },
+            "linux": {
+                "command": "./clean",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/linux",
+                },
+            },
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -89,6 +113,12 @@
                 "command": "remove.bat",
                 "options": {
                     "cwd": "${workspaceFolder}/shell/win",
+                },
+            },
+            "linux": {
+                "command": "./remove",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/linux",
                 },
             },
             "presentation": {
