@@ -4,29 +4,102 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "configure",
+            "label": "build",
             "type": "shell",
-            "command": "cmake",
-            "args": [
-                ".."
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/build}",
-                "env": {
-                    "CXX": "g++",
-                    "CMAKE_GENERATOR": "Ninja"
+            "windows": {
+                "command": "build.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/win",
                 },
-                // "shell": {
-                //     "executable": "zsh",
-                //     "args": [
-                //         "-C"
-                //     ]
-                // }
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "config",
+            "type": "shell",
+            "windows": {
+                "command": "config.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/win",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "windows": {
+                "command": "run.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/win",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
             },
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
-       }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "windows": {
+                "command": "clean.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/win",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "remove",
+            "type": "shell",
+            "windows": {
+                "command": "remove.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}/shell/win",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        }
     ]
 }

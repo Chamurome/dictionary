@@ -1,11 +1,9 @@
-#!/bin/sh
-clear 
-# averigua el directorio que aloja el script
-SCRIPT=$(readlink -f $0);
-dir=`dirname $SCRIPT`
-$dir/config.sh
-$dir/build.sh
+@echo off
+cls
 echo --------------------------------------------------------------------------------
-$dir/../../build/app
+@REM  averigua el directorio que aloja el script
+set dir=%~d0%~p0
+cd "%dir%..\..\build"
+cmake -G "Ninja" ..
+cd "%dir%..\.."
 echo --------------------------------------------------------------------------------
-
